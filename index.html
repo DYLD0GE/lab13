@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-app="ourModule" ng-controller="wordController">
+    <nav>
+      <button ng-click="getWord()">Words</button>
+      <button ng-click="getCoolWord()">Words With Decorations</button>
+      <button ng-click="getPhrase()">More words</button>
+      <button ng-click="getCoolPhrase()">More words with decorations</button>
+    </nav>
+    <p>
+      <span ng-repeat="word in words track by $index" ng-class="word.klass">{{ word.word }} </span>
+    </p>
+    <script src="lib/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
